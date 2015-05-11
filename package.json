@@ -1,0 +1,31 @@
+{
+  "name": "result",
+  "description": "values are either successful or failed",
+  "version": "0.0.1",
+  "keywords": [
+    "result",
+    "either"
+  ],
+  "author": {
+    "name": "tsk takezawa",
+    "email": "tsk.take815@gmail.com",
+    "url": "https://github.com/to4iki"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^10.1.3",
+    "mocha": "^2.2.4"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/to4iki/result.git"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "browserify ./lib/result.js -o ./build/result.js --standalone=Result"
+  }
+}
