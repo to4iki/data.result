@@ -34,7 +34,7 @@ var resultF = toInt('abc'); // Failure(Error('parsed error: abc'))
 ### Predicates
 ```javascript
 resultS.isSuccess // true
-resultS.isFailure // false
+resultS.isFailure // false
 ```
 
 ### Eq
