@@ -34,6 +34,20 @@ describe('Result', function() {
             assert(result.toString, 'Result.Success(abc)');
         });
 
+        it('#map', function() {
+            var maped = result.map(function(v) {
+                return v + '!'
+            });
+            assert(maped.value, 'abc!');
+        });
+
+        it('#flatMap', function() {
+            var chained = result.flatMap(function(v) {
+                return v + '!';
+            });
+            assert(chained, 'abc');
+        });
+
         it('#get', function() {
             assert(result.get(), 'abc');
         });
@@ -43,18 +57,25 @@ describe('Result', function() {
         });
 
         it('#orElse', function() {
+          var called = false;
+          var orElsed = result.orElse(function(v) {
+              called = true;
+              return v + '!';
+          });
+          assert(called !== true);
+        });
+
+        it('fold', function() {
+            var folded = result.fold(
+                function(s) { return 'success' },
+                function(e) { return 'error' }
+            )
+            assert(folded, 'success');
         });
 
         it('#swap', function() {
             var swaped = result.swap();
             assert(swaped.value.message, 'abc');
-        });
-
-        it('#map', function() {
-            var maped = result.map(function(v) {
-                return v + '!'
-            });
-            assert(maped.value, 'abc!');
         });
     });
 
@@ -79,6 +100,24 @@ describe('Result', function() {
             assert(result.toString, 'Result.Failure(Error: failure)');
         });
 
+        it('#map', function() {
+            var called = false;
+            var maped = result.map(function(e) {
+                called = true;
+                return e.message + '!'
+            });
+            assert(called !== true);
+        });
+
+        it('#flatMap', function() {
+            var called = false;
+            var chained = result.flatMap(function(v) {
+                called = true;
+                return e.message + '!'
+            });
+            assert(called !== true);
+        });
+
         it('#get', function() {
             assert.throws(function() { result.get(); })
         });
@@ -94,16 +133,17 @@ describe('Result', function() {
             assert(orElsed, 'failure!');
         });
 
+        it('fold', function() {
+            var folded = result.fold(
+                function(s) { return 'success' },
+                function(e) { return 'error' }
+            )
+            assert(folded, 'error');
+        });
+
         it('#swap', function() {
             var swaped = result.swap();
             assert(swaped.value, 'failure');
-        });
-
-        it('#map', function() {
-            var maped = result.map(function(e) {
-                return e.message + '!'
-            });
-            assert(maped.value.message, 'failure!')
         });
     });
 });
