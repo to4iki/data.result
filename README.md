@@ -1,7 +1,11 @@
 data.result
 ===========
 
-[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/to4iki/result/master/LICENSE)
+[![Build Status][travis-image]][travis-url]
+[![NPM package][npm-image]][npm-url]
+[![Bower package][bower-image]][bower-url]
+[![License][license-image]][license-url]
+
 
 Result[Value, Error] values are either successful or failed.
 
@@ -11,7 +15,7 @@ javascript Result Type like [antitypical/Result](https://github.com/antitypical/
 ## Usage
 
 ```javascript
-var result = require('result');
+var Result = require('data.result');
 
 function toInt(s) {
     var r = parseInt(s, 10);
@@ -28,7 +32,7 @@ var resultF = toInt('abc'); // Failure(Error('parsed error: abc'))
 ```
 
 ### Predicates
-```jacascript
+```javascript
 resultS.isSuccess // true
 resultS.isFailure // false
 ```
@@ -100,11 +104,54 @@ resultF.swap() // Success('parsed error: abc')
 ```
 
 ## Installation
+### npm
+Install
 
-## Licence
+```
+$ npm install --save data.result
+```
 
-[MIT](https://github.com/to4iki/result/master/LICENSE)
+Use
+
+```javascript
+var Result = require('data.result');
+```
+
+### bower
+Install
+
+```
+$ bower install --save data.result
+```
+
+Load (`data.result` function is exported)
+
+```html
+<script type="text/javascript" src="./path/to/bower_components/data.result/build/result.js"></script>
+```
+
+Use
+
+```javascript
+var success = Result.Success(123);
+```
 
 ## Author
 
 [to4iki](https://github.com/to4iki)
+
+## Licence
+
+[MIT](https://github.com/to4iki/data.result/master/LICENSE)
+
+[travis-url]: http://travis-ci.org/to4iki/data.result
+[travis-image]: https://secure.travis-ci.org/to4iki/data.result.svg?branch=master
+
+[npm-url]: https://npmjs.org/package/data.result
+[npm-image]: https://badge.fury.io/js/data.result.svg
+
+[bower-url]: http://badge.fury.io/bo/data.result
+[bower-image]: https://badge.fury.io/bo/data.result.svg
+
+[license-url]: https://github.com/to4iki/data.result/master/LICENSE
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square

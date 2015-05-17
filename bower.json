@@ -1,6 +1,7 @@
 {
   "name": "data.result",
   "description": "values are either successful or failed",
+  "version": "0.0.1",
   "main": "build/result.js",
   "license": "MIT",
   "ignore": [
