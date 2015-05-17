@@ -1,5 +1,5 @@
 {
-  "name": "result",
+  "name": "data.result",
   "description": "values are either successful or failed",
   "main": "build/result.js",
   "license": "MIT",
@@ -20,9 +20,9 @@
       "url": "https://github.com/to4iki"
     }
   ],
-  "homepage": "https://github.com/to4iki/result",
+  "homepage": "https://github.com/to4iki/data.result",
   "repository": {
     "type": "git",
-    "url": "git://github.com/to4iki/result.git"
+    "url": "git://github.com/to4iki/data.result.git"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "result",
+  "name": "data.result",
   "description": "values are either successful or failed",
   "version": "0.0.1",
   "keywords": [
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/to4iki/result.git"
+    "url": "git://github.com/to4iki/data.result.git"
   },
   "scripts": {
     "test": "mocha",
