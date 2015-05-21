@@ -11,7 +11,10 @@
     "email": "tsk.take815@gmail.com",
     "url": "https://github.com/to4iki"
   },
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "http://to4iki.mit-license.org/"
+  },
   "devDependencies": {
     "browserify": "^10.1.3",
     "mocha": "^2.2.4"

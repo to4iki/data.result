@@ -142,7 +142,7 @@ var success = Result.Success(123);
 
 ## Licence
 
-[MIT](https://github.com/to4iki/data.result/master/LICENSE)
+[MIT](http://to4iki.mit-license.org/)
 
 [travis-url]: http://travis-ci.org/to4iki/data.result
 [travis-image]: https://secure.travis-ci.org/to4iki/data.result.svg?branch=master
@@ -153,5 +153,5 @@ var success = Result.Success(123);
 [bower-url]: http://badge.fury.io/bo/data.result
 [bower-image]: https://badge.fury.io/bo/data.result.svg
 
-[license-url]: https://github.com/to4iki/data.result/master/LICENSE
-[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+[license-url]: http://to4iki.mit-license.org/
+[license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg

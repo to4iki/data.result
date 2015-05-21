@@ -3,7 +3,7 @@
   "description": "values are either successful or failed",
   "version": "0.0.1",
   "main": "build/result.js",
-  "license": "MIT",
+  "license": "http://to4iki.mit-license.org/",
   "ignore": [
     "**/.*",
     "index.js",
