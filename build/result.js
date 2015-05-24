@@ -59,6 +59,18 @@ Result.fromNullable = function(a) {
 };
 Result.prototype.fromNullable = Result.fromNullable;
 
+/**
+ * If the condition is satisfied
+ * @param  {Boolean} test predicate
+ * @param  {Function} f   the result function to bind across `Success`
+ * @param  {Function} g   the result function to bind across `Failure`
+ * @return {Result}
+ */
+Result.cond = function(test, f, g) {
+    return test ? this.Success(f()) : this.Failure(g());
+}
+Result.prototype.cond = Result.cond;
+
 // -- Predicates
 
 /**

@@ -13,6 +13,14 @@ describe('Result', function() {
         assert(f.isFailure === true);
     });
 
+    it('#cond', function() {
+        var s = Result.cond(true, function() { return 'success'; }, function() { return 'failure' });
+        assert(s.get(), 'success')
+
+        var f = Result.cond(false, function() { return 'success'; }, function() { return 'failure' });
+        assert.throws(function() { f.get(); })
+    });
+
     context('when Success', function() {
 
         var result = Result.Success('abc');
