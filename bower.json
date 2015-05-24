@@ -1,7 +1,7 @@
 {
   "name": "data.result",
   "description": "values are either successful or failed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "build/result.js",
   "license": "http://to4iki.mit-license.org/",
   "ignore": [
